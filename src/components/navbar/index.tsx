@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Poppins } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-import { NAVBAR_ITEMS } from "@/app/(home)/constants";
+import { NAVBAR_ITEMS } from "@/app/(app)/(home)/constants";
 import { NavbarItem } from "./navbarItem";
 import { Button } from "../ui/button";
 import { Sidebar } from "../sidebar-mobile";

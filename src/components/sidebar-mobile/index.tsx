@@ -1,11 +1,16 @@
-import { NAVBAR_ITEMS } from "@/app/(home)/constants";
+import { NAVBAR_ITEMS } from "@/app/(app)/(home)/constants";
 import { ScrollArea } from "../ui/scroll-area";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 import { LucideMenu } from "lucide-react";
 import { SidebarItem } from "./sidebarItem";
 
-interface SidebarProps
- {
+interface SidebarProps {
   items: typeof NAVBAR_ITEMS;
   onOpenChange: (open: boolean) => void;
   open: boolean;
@@ -47,6 +52,6 @@ function Sidebar({ items, open, onOpenChange }: SidebarProps) {
       </SheetContent>
     </Sheet>
   );
-};
+}
 
 export { Sidebar };
