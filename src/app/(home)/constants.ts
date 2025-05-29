@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 export interface NavbarLink {
   href: string;
-  label: ReactNode;
+  children: ReactNode;
 }
 
 export const NAVBAR_ITEMS: NavbarLink[] = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", children: "Home" },
+  { href: "/about", children: "About" },
+  { href: "/features", children: "Features" },
+  { href: "/pricing", children: "Pricing" },
+  { href: "/contact", children: "Contact" },
 ];
