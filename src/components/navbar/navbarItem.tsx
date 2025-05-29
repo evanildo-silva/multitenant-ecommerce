@@ -11,7 +11,7 @@ interface NavbarItemProps {
   isActive: boolean;
 }
 
-export const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
+function NavbarItem({ href, children, isActive }: NavbarItemProps) {
   return (
     <Button
       asChild
@@ -27,4 +27,6 @@ export const NavbarItem = ({ href, children, isActive }: NavbarItemProps) => {
       </Link>
     </Button>
   );
-};
+}
+
+export { NavbarItem };
