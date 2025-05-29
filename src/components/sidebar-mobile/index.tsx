@@ -16,7 +16,7 @@ function Sidebar({ items, open, onOpenChange }: SidebarProps) {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetTrigger className="flex lg:hidden mr-6">
+      <SheetTrigger className="flex lg:hidden mr-6 p-3 rounded hover:bg-accent active:bg-accent">
         <LucideMenu />
       </SheetTrigger>
       <SheetContent

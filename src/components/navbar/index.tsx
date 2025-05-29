@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 import { NAVBAR_ITEMS } from "@/app/(home)/constants";
 import { NavbarItem } from "./navbarItem";
 import { Button } from "../ui/button";
+import { Sidebar } from "../sidebar-mobile";
+import { useState } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,6 +17,7 @@ const poppins = Poppins({
 });
 
 function Navbar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const currentPath = usePathname();
 
   return (
@@ -32,6 +35,12 @@ function Navbar() {
           </NavbarItem>
         ))}
       </div>
+
+      <Sidebar
+        items={NAVBAR_ITEMS}
+        onOpenChange={setIsSidebarOpen}
+        open={isSidebarOpen}
+      />
 
       <div className="hidden lg:flex h-full">
         <Button
